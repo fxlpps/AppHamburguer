@@ -24,15 +24,20 @@ public partial class CalculoPage : ContentPage
         if (double.TryParse(txtEtanol.Text, out etanol) && etanol > 0 &&
             double.TryParse(txtGasolina.Text, out gasolina) && gasolina > 0) {
 
-            //3. Cálculo da razão/proporção entre Etanol e Gasolina
-            //Regra dos 70%: Se o preço do etanol for até 70% do preço da gasolina, vale a pena usar
+        //3. Cálculo da razão/proporção entre Etanol e Gasolina
+        //Regra dos 70%: Se o preço do etanol for até 70% do preço da gasolina, vale a pena usar
             double proporcao = etanol / gasolina;
 
-            //4. Verificação de qual combustível compensa mais
+        //4. Verificação de qual combustível compensa mais
             if (proporcao <= 0.70)
             {
-                lblResultado.Text = $"Vale a pena abestecer com ETANOL";
+                lblResultado.Text = $"Vale a pena abestecer com ETANOL!\n(Proporção: {proporcao:P1})"; //
                 lblResultado.TextColor = Colors.Green;
+            }
+            else
+            {
+                lblResultado.Text = $"Vale a pena abastecer com GASOLINA!\n(Proporção: {proporcao:P1})";
+                lblResultado.TextColor = Colors.Blue;
             }
 
         }
