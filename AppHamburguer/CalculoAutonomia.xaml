@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHamburguer.CalculoAutonomia"
+             Title="CalculoAutonomia">
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Entry x:Name="txtDistancia"
+               Placeholder="Digite a distância percorrida (km)"
+               Keyboard="Numeric"
+               />
+
+        <Entry x:Name="txtLitros"
+               Placeholder="Digite a quantidade de litros abastecidos"
+               Keyboard="Numeric"
+               />
+
+        <Label x:Name="lblResultado"
+               Text=""
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
+
+        <Button Text="Calcular Autonomia" WidthRequest="200"
+                Clicked="OnCalcularAutonomiaClicked" />
+
+        <Button Text="Limpar" WidthRequest="200"
+                Clicked="OnLimparClicked" />
+    </VerticalStackLayout>
+</ContentPage>
