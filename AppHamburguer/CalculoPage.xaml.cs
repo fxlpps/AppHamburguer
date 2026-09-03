@@ -10,7 +10,8 @@ public partial class CalculoPage : ContentPage
     private void OnLimparClicked(object sender, EventArgs e)
     {
         txtGasolina.Text = "";
-        txtEtanol.Text = "";    
+        txtEtanol.Text = "";
+        lblResultado.Text = "";
     }
 
     private void OnCalcularClicked(object sender, EventArgs e)

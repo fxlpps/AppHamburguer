@@ -15,7 +15,7 @@ public partial class CalculoAutonomia : ContentPage
 
 		//2. Tenta converter os textos e verifica se são maiores que 0
 		if (double.TryParse(txtDistancia.Text, out distancia) && distancia > 0 &&
-			double.Tryparse(txtLitros.text, out litros) && litros > 0)
+			double.TryParse(txtLitros.Text, out litros) && litros > 0)
 		{
 			//3. Cálculo da autonomia e exibição do resultado
 			double autonomia = distancia / litros;
@@ -32,6 +32,6 @@ public partial class CalculoAutonomia : ContentPage
 	{
 		txtDistancia.Text = string.Empty;
         txtLitros.Text = string.Empty;
-        txtResultado.Text = string.Empty;
+        lblResultado.Text = string.Empty;
     }
 }
